@@ -11,11 +11,13 @@ I'll choose project 1(Harmonic series)
 
 如果x<=1，不存在N滿足S(N+1)>x>sN，會讓使用者重新輸入x
 
+如果x>33.5，1/N會開始小於machine epsilon，程式會判斷為0，無法找到N，會讓使用者重新輸入x
+
 無法輸出答案之情況:
 
 如果S(N+1)=x，不存在N滿足S(N+1)>x>sN
 
-如果x>33.5，1/N會開始小於machine epsilon，程式會判斷為0，無法找到N
+
 
 For example:
 
