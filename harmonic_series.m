@@ -37,6 +37,8 @@ function harmonic_series(x)                     %¿é¤J¤@­Óx?(1,27.5]¡A¦¹¤èµ{¦¡±N¿
     
     if sum_all == x                             %¦pªGS(N+1)=x¡AN¤£¦s¦b
         disp('µLªkÅã¥Üµª®×¡A¦]¬°S(N+1)=x¡A¤£¦s¦bN¨Ï±oS(N+1)>x>sN');
+    elseif sum_all == sum_all + 1/N             %·í1/N¤p©ómachine epsilon¡Aµ{¦¡·|§PÂ_¬°0¡AµLªk§ä¨ìN
+        disp('µLªkÅã¥Üµª®×¡A¦]¬°1/N¤w¶}©l¤p©ómachine epsilon¡A±N³Q§PÂ_¬°0¡A§YµLªk§ä¨ìN');
     else  
         disp(['S' num2str(N-2) '(SN)=']);
         disp(SN);                               %¿é¥XSN
