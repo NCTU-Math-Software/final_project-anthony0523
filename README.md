@@ -17,9 +17,7 @@ I'll choose project 1(Harmonic series)
 
 如果S(N+1)=x，不存在N滿足S(N+1)>x>sN
 
-
-
-For example:
+EXAMPLE:
 
 INPUT:
 
