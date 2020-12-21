@@ -10,41 +10,41 @@ OUTPUT:
     S83 > 5 > S82, so N=82 
 %}
 
-%¿é¤J¤@­ÓxÄİ©ó(1,33.5)¡A¦¹¤èµ{¦¡±N¿é¥X¤@­ÓNÄİ©ó¥¿¾ã¼Æ¨Ãº¡¨¬S(N+1)>x>sN (¦pªGx>33.5¡A1/N·|¶}©l¤p©ómachine epsilon¡Aµ{¦¡·|§PÂ_¬°0¡AµLªk§ä¨ìN)
+%è¼¸å…¥ä¸€å€‹xå±¬æ–¼(1,33.5)ï¼Œæ­¤æ–¹ç¨‹å¼å°‡è¼¸å‡ºä¸€å€‹Nå±¬æ–¼æ­£æ•´æ•¸ä¸¦æ»¿è¶³S(N+1)>x>sN (å¦‚æœx>33.5ï¼Œ1/Næœƒé–‹å§‹å°æ–¼machine epsilonï¼Œç¨‹å¼æœƒåˆ¤æ–·ç‚º0ï¼Œç„¡æ³•æ‰¾åˆ°N)
 function harmonic_series(x)                     
-    format long                                 %³]©wÅã¥Ü15¦ìºë«×
-    sum_all = 0;                                %³]©wªì©lªºÁ`©M¬°0
-    N = 1;                                      %¦¸¼Æ±q1¶}©l
-    if x <= 1                                   %¦pªGx<=1¡AN¤£¦s¦b
-        disp('x<=1¡A¬GµLªkÅã¥Üµª®×¡A¤£¦s¦bN¨Ï±oS(N+1)>x>sN');
-        x = input('½Ğ­«·s¿é¤Jx¡A½d³ò¬°(1,33.5):');
-    elseif x > 27.5 && x < 33.5                 %¦pªGx>27.5¡A­pºâ®É¶¡±N¶W¥X10¤ÀÄÁ
-        disp('33.5 > x > 27.5¡A¼Æ¦r¹L¤j¡Aµ{¦¡±N°õ¦æ¶W¹L10¤ÀÄÁ')
-        choose = input('¬O§_½T©w­n°õ¦æ¡A¬O½Ğ«ö1¡A§_«h«ö0:');
+    format long                                 %è¨­å®šé¡¯ç¤º15ä½ç²¾åº¦
+    sum_all = 0;                                %è¨­å®šåˆå§‹çš„ç¸½å’Œç‚º0
+    N = 1;                                      %æ¬¡æ•¸å¾1é–‹å§‹
+    if x < 1                                   %å¦‚æœx<1ï¼ŒNä¸å­˜åœ¨
+        disp('x<1ï¼Œæ•…ç„¡æ³•é¡¯ç¤ºç­”æ¡ˆï¼Œä¸å­˜åœ¨Nä½¿å¾—S(N+1)>x>sN');
+        x = input('è«‹é‡æ–°è¼¸å…¥xï¼Œç¯„åœç‚º(1,33.5):');
+    elseif x > 27.5 && x < 33.5                 %å¦‚æœx>27.5ï¼Œè¨ˆç®—æ™‚é–“å°‡è¶…å‡º10åˆ†é˜
+        disp('33.5 > x > 27.5ï¼Œæ•¸å­—éå¤§ï¼Œç¨‹å¼å°‡åŸ·è¡Œè¶…é10åˆ†é˜')
+        choose = input('æ˜¯å¦ç¢ºå®šè¦åŸ·è¡Œï¼Œæ˜¯è«‹æŒ‰1ï¼Œå¦å‰‡æŒ‰0:');
         if choose == 0
-            x = input('½Ğ­«·s¿é¤Jx¡A½d³ò¬°(1,33.5):');
+            x = input('è«‹é‡æ–°è¼¸å…¥xï¼Œç¯„åœç‚º(1,33.5):');
         end
     elseif x >= 33.5
-        disp('x >= 33.5¡AµLªkÅã¥Üµª®×¡A¦]¬°1/N¤w¶}©l¤p©ómachine epsilon¡A±N³Q§PÂ_¬°0¡A§YµLªk§ä¨ìN');
-        x = input('½Ğ­«·s¿é¤Jx¡A½d³ò¬°(1,33.5):');
+        disp('x >= 33.5ï¼Œç„¡æ³•é¡¯ç¤ºç­”æ¡ˆï¼Œå› ç‚º1/Nå·²é–‹å§‹å°æ–¼machine epsilonï¼Œå°‡è¢«åˆ¤æ–·ç‚º0ï¼Œå³ç„¡æ³•æ‰¾åˆ°N');
+        x = input('è«‹é‡æ–°è¼¸å…¥xï¼Œç¯„åœç‚º(1,33.5):');
     end
 
-    while sum_all < x                           %³]©w±ø¥ó¬°Á`©M¤p©óx®ÉÄ~Äò°µ
-        sum_all = sum_all + 1/N;                %­pºâÁ`©M
-        N = N+1;                                %­p¦¸
+    while sum_all < x                           %è¨­å®šæ¢ä»¶ç‚ºç¸½å’Œå°æ–¼xæ™‚ç¹¼çºŒåš
+        sum_all = sum_all + 1/N;                %è¨ˆç®—ç¸½å’Œ
+        N = N+1;                                %è¨ˆæ¬¡
     end
-    SN = sum_all - 1/(N-1);                     %´î¦^¤@¶µ¡A­pºâSN
+    SN = sum_all - 1/(N-1);                     %æ¸›å›ä¸€é …ï¼Œè¨ˆç®—SN
      
-    if sum_all == x                             %¦pªGS(N+1)=x¡AN¤£¦s¦b
-        disp('µLªkÅã¥Üµª®×¡A¦]¬°S(N+1)=x¡A¤£¦s¦bN¨Ï±oS(N+1)>x>sN');
-        disp(['S' num2str(N-1) ' = ']);   %¿é¥XS(N+1)  
+    if sum_all == x                             %å¦‚æœS(N+1)=xï¼ŒNä¸å­˜åœ¨
+        disp('ç„¡æ³•é¡¯ç¤ºç­”æ¡ˆï¼Œå› ç‚ºS(N+1)=xï¼Œä¸å­˜åœ¨Nä½¿å¾—S(N+1)>x>sN');
+        disp(['S' num2str(N-1) ' = ']);   %è¼¸å‡ºS(N+1)  
         disp(sum_all);
         disp(['S' num2str(N-1) ' = x = ' num2str(x)]);
     else  
-        disp(['S' num2str(N-2) '(SN)=']);       %¿é¥XSN
+        disp(['S' num2str(N-2) '(SN)=']);       %è¼¸å‡ºSN
         disp(SN);                               
-        disp(['S' num2str(N-1) '(S(N+1))=']);   %¿é¥XS(N+1)  
+        disp(['S' num2str(N-1) '(S(N+1))=']);   %è¼¸å‡ºS(N+1)  
         disp(sum_all);                          
-        disp(['S' num2str(N-1) ' > ' num2str(x) ' > S' num2str(N-2) ', so N=' num2str(N-2)]); %¿é¥XN
+        disp(['S' num2str(N-1) ' > ' num2str(x) ' > S' num2str(N-2) ', so N=' num2str(N-2)]); %è¼¸å‡ºN
     end 
 end
