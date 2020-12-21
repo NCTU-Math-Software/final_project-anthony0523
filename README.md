@@ -9,7 +9,7 @@ I'll choose project 1(Harmonic series)
 
 1.如果33.5>x>27.5，計算時間將超出10分鐘，會讓使用者決定是否要執行
 
-2.如果x<=1，不存在N滿足S(N+1)>x>sN
+2.如果x<1，不存在N滿足S(N+1)>x>sN
 
 3.如果x>=33.5，1/N會開始小於machine epsilon，程式會判斷為0，無法找到N
 
