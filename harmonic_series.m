@@ -15,6 +15,7 @@ function harmonic_series(x)
     format long                                 %設定顯示15位精度
     sum_all = 0;                                %設定初始的總和為0
     N = 1;                                      %次數從1開始
+    
     if x < 1                                    %如果x<1，N不存在
         disp('x<1，故無法顯示答案，不存在N使得S(N+1)>x>sN');
         x = input('請重新輸入x，範圍為(1,33.5):');
