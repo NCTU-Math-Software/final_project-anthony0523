@@ -3,7 +3,7 @@ final_project-anthony0523 created by GitHub Classroom
 
 I'll choose project 1(Harmonic series)
 
-輸入一個x∈(1,33.5)，此方程式將輸出一個N∈正整數並滿足級數和1/N，S(N+1)>x>sN
+輸入一個x∈(1,33.5)，此方程式將輸出一個N∈正整數並滿足級數和1/n，n從1到N，S(N+1)>x>sN
 
 小提醒(以下三種情況均會讓使用者重新輸入x):
 
