@@ -38,6 +38,6 @@ OUTPUT:
 
     S83 > 5 > S82, so N=82
 
-### 參考
+### 參考資料:
 
 [x上限為33.8](https://core.ac.uk/download/pdf/297018835.pdf)
