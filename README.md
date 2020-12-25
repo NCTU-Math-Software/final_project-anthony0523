@@ -40,4 +40,4 @@ OUTPUT:
 
 ### 參考資料:
 
-[x上限為33.8](https://core.ac.uk/download/pdf/297018835.pdf)
+[x上限為33.8(Irish Math. Soc. Bulletin)](https://core.ac.uk/download/pdf/297018835.pdf)
