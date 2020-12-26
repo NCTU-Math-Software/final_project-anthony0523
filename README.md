@@ -14,7 +14,7 @@
 
 ### 特殊情況:
 
-如果x>=33.8，1/N會開始小於machine epsilon，程式會判斷為0，此時會用Euler’s estimate method計算估計值(備註1)
+如果x>=33.8，1/N會開始小於machine epsilon，程式會判斷為0，此時會用Euler’s estimate method計算估計值 (備註)
 
 如果S(N+1)=x，不存在N滿足S(N+1)>x>SN，會輸出S(N+1)的答案並告知S(N+1)=x
 
@@ -69,7 +69,7 @@ OUTPUT:
     N=
         1.321592903575671e+17
 
-## 備註1
+## 備註
 
 用Euler’s estimate for the harmonic sum，我們可以得知 x ≈ SN ≈ ln(N) + γ  where  γ =  0.577215664901533 . . . (參考1)
 
