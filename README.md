@@ -8,13 +8,13 @@
 
 1.如果x<1，不存在N滿足S(N+1)>x>SN
 
-2.如果x>710，數字過於龐大，程式無法計算
+2.如果x>710，數字過於龐大，程式無法計算 (備註1)
 
 3.如果33.8>x>27.5，計算時間將超出10分鐘，會讓使用者決定是否要執行
 
 ### 特殊情況:
 
-如果x>=33.8，1/N會開始小於machine epsilon，程式會判斷為0，此時會用Euler’s estimate method計算估計值 (備註)
+如果x>=33.8，1/N會開始小於machine epsilon，程式會判斷為0，此時會用Euler’s estimate method計算估計值 (備註2)
 
 如果S(N+1)=x，不存在N滿足S(N+1)>x>SN，會輸出S(N+1)的答案並告知S(N+1)=x
 
@@ -71,12 +71,20 @@ OUTPUT:
 
 ## 備註
 
-用Euler’s estimate for the harmonic sum，我們可以得知 x ≈ SN ≈ ln(N) + γ  where  γ =  0.577215664901533 . . . (參考1)
+###備註1:
+
+對於N = 10^308，將γ之後的所有項都估計為零。 (參考1)
+
+對級數和1/n，n從1到10^308，其級數和大約為710。
+
+###備註2:
+
+用Euler’s estimate for the harmonic sum，我們可以得知 x ≈ SN ≈ ln(N) + γ  where  γ =  0.577215664901533 . . . (參考2)
 
 也就是說，N ≈ exp(x - γ).
 
 ## 參考資料:
 
-[參考1(Irish Math. Soc. Bulletin)](https://core.ac.uk/download/pdf/297018835.pdf)
+[參考1(Diego Miramontes)](https://www.researchgate.net/publication/344293598_An_alternative_strategy_for_harmonic_numbers_calculation_and_a_numerical_growth_rate)
 
-[參考2(Diego Miramontes)](https://www.researchgate.net/publication/344293598_An_alternative_strategy_for_harmonic_numbers_calculation_and_a_numerical_growth_rate)
+[參考2(Irish Math. Soc. Bulletin)](https://core.ac.uk/download/pdf/297018835.pdf)
