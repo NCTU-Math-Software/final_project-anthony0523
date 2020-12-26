@@ -26,7 +26,7 @@
 
 3.判斷x是否剛好等於級數和，如果是，輸出S(N+1)的答案並告知S(N+1)=x；否則正常輸出答案
 
-#### EXAMPLE 1:
+#### EXAMPLE 1(正常情況):
 
 INPUT:
 
@@ -42,7 +42,7 @@ OUTPUT:
 
     S83 > 5 > S82, so N=82
 
-#### EXAMPLE 2:
+#### EXAMPLE 2(級數和等於x):
 
 INPUT:
 
@@ -56,7 +56,7 @@ OUTPUT:
 
     S6 = x = 2.45
     
-#### EXAMPLE 3:
+#### EXAMPLE 3(x>=33.8之情況):
 
 INPUT:
 
