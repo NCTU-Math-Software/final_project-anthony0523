@@ -59,7 +59,7 @@ OUTPUT:
 
 
 
-### 參考資料:
+## 參考資料:
 
 [參考1(Irish Math. Soc. Bulletin)](https://core.ac.uk/download/pdf/297018835.pdf)
 
