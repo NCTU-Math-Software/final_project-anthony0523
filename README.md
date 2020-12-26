@@ -14,7 +14,7 @@
 
 ### 特殊情況:
 
-如果x>=33.8，1/N會開始小於machine epsilon，程式會判斷為0，此時會用Euler’s estimate method計算估計值
+如果x>=33.8，1/N會開始小於machine epsilon，程式會判斷為0，此時會用Euler’s estimate method計算估計值(備註1)
 
 如果S(N+1)=x，不存在N滿足S(N+1)>x>SN，會輸出S(N+1)的答案並告知S(N+1)=x
 
@@ -26,7 +26,7 @@
 
 3.判斷x是否剛好等於級數和，如果是，輸出S(N+1)的答案並告知S(N+1)=x；否則正常輸出答案
 
-### EXAMPLE1:
+#### EXAMPLE 1:
 
 INPUT:
 
@@ -35,14 +35,14 @@ INPUT:
 OUTPUT:
 
     S82=
-    4.990020079909081
+        4.990020079909081
 
     S83=
-    5.002068272680166
+        5.002068272680166
 
     S83 > 5 > S82, so N=82
 
-### EXAMPLE2
+#### EXAMPLE 2:
 
 INPUT:
 
@@ -54,7 +54,13 @@ OUTPUT:
     用Euler’s estimate method, 我們可以得到估計值:
     N=
         1.321592903575671e+17
-        
+
+## 備註1
+
+
+
 ### 參考資料:
 
-[Euler’s estimate method(Irish Math. Soc. Bulletin)](https://core.ac.uk/download/pdf/297018835.pdf)
+[參考1(Irish Math. Soc. Bulletin)](https://core.ac.uk/download/pdf/297018835.pdf)
+
+[參考2(Diego Miramontes)](https://www.researchgate.net/publication/344293598_An_alternative_strategy_for_harmonic_numbers_calculation_and_a_numerical_growth_rate)
