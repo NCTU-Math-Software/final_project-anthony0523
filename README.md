@@ -57,7 +57,7 @@ OUTPUT:
 
 ## 備註1
 
-用Euler’s estimate for the harmonic sum，我們可以得知 x ≈ SN ≈ ln(N) + γ where γ = 0.577215...(參考1)
+用Euler’s estimate for the harmonic sum，我們可以得知 x ≈ SN ≈ ln(N) + γ where γ = 0.577215...... (參考1)
 
 也就是說，N ≈ exp(x - γ).
 
