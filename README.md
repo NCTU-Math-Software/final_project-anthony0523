@@ -22,11 +22,11 @@
 
 1.判斷x範圍是否合理，如果x不屬於(1,710)，則讓使用者重新輸入
 
-2.用while迴圈計算級數和，當總和小於x時繼續做，可算出S(N+1)和SN，如果x>=33.8，用Euler’s estimate method計算估計值
+2.用while迴圈計算級數和，當總和小於x時繼續做，可算出S(N+1)和SN；如果x>=33.8，用Euler’s estimate method計算估計值
 
 3.判斷x是否剛好等於級數和，如果是，輸出S(N+1)的答案並告知S(N+1)=x；否則正常輸出答案
 
-### EXAMPLE:
+### EXAMPLE1:
 
 INPUT:
 
@@ -42,6 +42,19 @@ OUTPUT:
 
     S83 > 5 > S82, so N=82
 
+### EXAMPLE2
+
+INPUT:
+
+    x=40
+    
+OUTPUT:
+
+    x >= 33.8，因為1/N已開始小於machine epsilon，將被判斷為0
+    用Euler’s estimate method, 我們可以得到估計值:
+    N=
+        1.321592903575671e+17
+        
 ### 參考資料:
 
 [Euler’s estimate method(Irish Math. Soc. Bulletin)](https://core.ac.uk/download/pdf/297018835.pdf)
