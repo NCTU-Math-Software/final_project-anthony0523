@@ -17,7 +17,7 @@ function harmonic_series(x)
         disp('33.8 > x > 27.5，數字過大，程式將執行超過10分鐘')
         choose = input('是否確定要執行，是請按1，否則按0:');
         if choose == 0
-            x = input('請重新輸入x，範圍為(1,33.8):');
+            x = input('請重新輸入x，範圍為(1,710):');
         end
     end
     while sum_all < x                           %設定條件為總和小於x時繼續做
