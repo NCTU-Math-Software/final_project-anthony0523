@@ -3,7 +3,7 @@ function harmonic_series(x)
     format long                                 %設定顯示15位精度
     sum_all = 0;                                %設定初始的總和為0
     N = 1;                                      %次數從1開始
-    gamma = 0.577215664901533;
+    gamma = 0.577215664901533;                  %常數gamma
     
     while x < 1 || x > 710                      %如果x<1，N不存在;如果x>710，無法找到N
         if x < 1
@@ -46,7 +46,7 @@ function harmonic_series(x)
         disp('用Euler’s estimate method, 我們可以得到估計值:');
         disp('N=');
         disp(N);
-    else  
+    else                                        %正常情況之輸出
         disp(['S' num2str(N-2) ' =']);          %輸出SN
         disp(SN);                               
         disp(['S' num2str(N-1) ' =']);          %輸出S(N+1)  
