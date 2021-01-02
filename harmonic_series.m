@@ -1,56 +1,56 @@
-%è¼¸å…¥ä¸€å€‹xå±¬æ–¼(1,710)ï¼Œæ­¤æ–¹ç¨‹å¼å°‡è¼¸å‡ºä¸€å€‹Nå±¬æ–¼æ­£æ•´æ•¸ä¸¦æ»¿è¶³S(N+1)>x>sN (å¦‚æœx>33.8ï¼Œ1/Næœƒé–‹å§‹å°æ–¼machine epsilonï¼Œç¨‹å¼æœƒåˆ¤æ–·ç‚º0ï¼Œæ•…é–‹å§‹ç”¨Eulerâ€™s estimate methodæ‰¾ä¼°è¨ˆå€¼)
+%¿é¤J¤@­ÓxÄİ©ó(1,710)¡A¦¹¤èµ{¦¡±N¿é¥X¤@­ÓNÄİ©ó¥¿¾ã¼Æ¨Ãº¡¨¬S(N+1)>x>sN (¦pªGx>33.8¡A1/N·|¶}©l¤p©ómachine epsilon¡Aµ{¦¡·|§PÂ_¬°0¡A¬G¶}©l¥ÎEuler-Maclaurin sum§ä¦ô­p­È)
 function harmonic_series(x)                     
-    format long                                 %è¨­å®šé¡¯ç¤º15ä½ç²¾åº¦
-    sum_all = 0;                                %è¨­å®šåˆå§‹çš„ç¸½å’Œç‚º0
-    N = 1;                                      %æ¬¡æ•¸å¾1é–‹å§‹
-    gamma = 0.577215664901533;                  %å¸¸æ•¸gamma
+    format long                                 %³]©wÅã¥Ü15¦ìºë«×
+    sum_all = 0;                                %³]©wªì©lªºÁ`©M¬°0
+    N = 1;                                      %¦¸¼Æ±q1¶}©l
+    gamma = 0.577215664901533;                  %±`¼Ægamma
     
-    while x < 1 || x > 710                      %å¦‚æœx<1ï¼ŒNä¸å­˜åœ¨;å¦‚æœx>710ï¼Œç„¡æ³•æ‰¾åˆ°N
+    while x < 1 || x > 710                      %¦pªGx<1¡AN¤£¦s¦b;¦pªGx>710¡AµLªk§ä¨ìN
         if x < 1
-            disp('x < 1ï¼Œæ•…ç„¡æ³•é¡¯ç¤ºç­”æ¡ˆï¼Œä¸å­˜åœ¨Nä½¿å¾—S(N+1)>x>sN');
+            disp('x < 1¡A¬GµLªkÅã¥Üµª®×¡A¤£¦s¦bN¨Ï±oS(N+1)>x>sN');
         else
-            disp('x > 710ï¼Œæ•¸å­—éå¤§ï¼Œç„¡æ³•æ‰¾åˆ°N');
+            disp('x > 710¡A¼Æ¦r¹L¤j¡AµLªk§ä¨ìN');
         end
-        x = input('è«‹é‡æ–°è¼¸å…¥xï¼Œç¯„åœç‚º(1,710):');
+        x = input('½Ğ­«·s¿é¤Jx¡A½d³ò¬°(1,710):');
     end
-    if x > 27.5 && x < 33.8                     %å¦‚æœx>27.5ï¼Œè¨ˆç®—æ™‚é–“å°‡è¶…å‡º10åˆ†é˜
-        disp('33.8 > x > 27.5ï¼Œæ•¸å­—éå¤§ï¼Œç¨‹å¼å°‡åŸ·è¡Œè¶…é10åˆ†é˜')
-        choose = input('æ˜¯å¦ç¢ºå®šè¦åŸ·è¡Œï¼Œæ˜¯è«‹æŒ‰1ï¼Œå¦å‰‡æŒ‰0:');
+    if x > 27.5 && x < 33.8                     %¦pªGx>27.5¡A­pºâ®É¶¡±N¶W¥X10¤ÀÄÁ
+        disp('33.8 > x > 27.5¡A¼Æ¦r¹L¤j¡Aµ{¦¡±N°õ¦æ¶W¹L10¤ÀÄÁ')
+        choose = input('¬O§_½T©w­n°õ¦æ¡A¬O½Ğ«ö1¡A§_«h«ö0:');
         if choose == 0
-            x = input('è«‹é‡æ–°è¼¸å…¥xï¼Œç¯„åœç‚º(1,710):');
+            x = input('½Ğ­«·s¿é¤Jx¡A½d³ò¬°(1,710):');
         end
     end
-    while sum_all < x                           %è¨­å®šæ¢ä»¶ç‚ºç¸½å’Œå°æ–¼xæ™‚ç¹¼çºŒåš
-        if x>= 33.8                             %x >= 33.8ï¼Œå› ç‚º1/Nå·²é–‹å§‹å°æ–¼machine epsilonï¼Œå°‡è¢«åˆ¤æ–·ç‚º0
-            N = exp(x - gamma);                 %ç”¨Eulerâ€™s estimate methodä¾†ä¼°è¨ˆN
+    while sum_all < x                           %³]©w±ø¥ó¬°Á`©M¤p©óx®ÉÄ~Äò°µ
+        if x>= 33.8                             %x >= 33.8¡A¦]¬°1/N¤w¶}©l¤p©ómachine epsilon¡A±N³Q§PÂ_¬°0
+            N = exp(x - gamma);                 %¥ÎEuler-Maclaurin sum¨Ó¦ô­pN
             break
         end
-        sum_all = sum_all + (1/N);              %è¨ˆç®—ç¸½å’Œ
-        N = N+1;                                %è¨ˆæ¬¡
+        sum_all = sum_all + (1/N);              %­pºâÁ`©M
+        N = N+1;                                %­p¦¸
     end
-    SN = sum_all - 1/(N-1);                     %æ¸›å›ä¸€é …ï¼Œè¨ˆç®—SN
+    SN = sum_all - 1/(N-1);                     %´î¦^¤@¶µ¡A­pºâSN
      
-    if abs(sum_all - x) < 10^(-10) || abs(SN - x) < 10^(-10)       %å¦‚æœS(N+1)=xï¼ŒNä¸å­˜åœ¨
-        disp('ç„¡æ³•é¡¯ç¤ºç­”æ¡ˆï¼Œå› ç‚ºç´šæ•¸å’Œç­‰æ–¼xï¼Œä¸å­˜åœ¨Nä½¿å¾—S(N+1)>x>sN');
+    if abs(sum_all - x) < 10^(-10) || abs(SN - x) < 10^(-10)       %¦pªGS(N+1)=x¡AN¤£¦s¦b
+        disp('µLªkÅã¥Üµª®×¡A¦]¬°¯Å¼Æ©Mµ¥©óx¡A¤£¦s¦bN¨Ï±oS(N+1)>x>sN');
         if abs(sum_all - x) < 10^(-10)
-            disp(['S' num2str(N-1) ' = ']);     %è¼¸å‡ºS(N+1)  
+            disp(['S' num2str(N-1) ' = ']);     %¿é¥XS(N+1)  
             disp(sum_all);
             disp(['S' num2str(N-1) ' = x = ' num2str(x)]);
         elseif abs(SN - x) < 10^(-10)
-            disp(['S' num2str(N-2) ' = ']);     %è¼¸å‡ºSN  
+            disp(['S' num2str(N-2) ' = ']);     %¿é¥XSN  
             disp(SN);
             disp(['S' num2str(N-2) ' = x = ' num2str(x)]);
         end
-    elseif x >= 33.8                            %å¦‚æœx>=33.8ï¼Œè¼¸å‡ºä¼°è¨ˆå€¼
-        disp('x >= 33.8ï¼Œå› ç‚º1/Nå·²é–‹å§‹å°æ–¼machine epsilonï¼Œå°‡è¢«åˆ¤æ–·ç‚º0');
-        disp('ç”¨Eulerâ€™s estimate method, æˆ‘å€‘å¯ä»¥å¾—åˆ°ä¼°è¨ˆå€¼:');
+    elseif x >= 33.8                            %¦pªGx>=33.8¡A¿é¥X¦ô­p­È
+        disp('x >= 33.8¡A¦]¬°1/N¤w¶}©l¤p©ómachine epsilon¡A±N³Q§PÂ_¬°0');
+        disp('¥ÎEuler-Maclaurin sum, §Ú­Ì¥i¥H±o¨ì¦ô­p­È:');
         disp('N=');
         disp(N);
-    else                                        %æ­£å¸¸æƒ…æ³ä¹‹è¼¸å‡º
-        disp(['S' num2str(N-2) ' =']);          %è¼¸å‡ºSN
+    else                                        %¥¿±`±¡ªp¤§¿é¥X
+        disp(['S' num2str(N-2) ' =']);          %¿é¥XSN
         disp(SN);                               
-        disp(['S' num2str(N-1) ' =']);          %è¼¸å‡ºS(N+1)  
+        disp(['S' num2str(N-1) ' =']);          %¿é¥XS(N+1)  
         disp(sum_all);                          
-        disp(['S' num2str(N-1) ' > ' num2str(x) ' > S' num2str(N-2) ', so N=' num2str(N-2)]); %è¼¸å‡ºN
+        disp(['S' num2str(N-1) ' > ' num2str(x) ' > S' num2str(N-2) ', so N=' num2str(N-2)]); %¿é¥XN
     end 
 end
