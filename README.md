@@ -4,28 +4,6 @@
 
 輸入一個x∈(1,710)，此方程式將輸出一個正整數N並滿足級數和1/n，n從1到N，S(N+1)>x>SN
 
-### 小提醒(以下三種情況均會讓使用者重新輸入x):
-
-1.如果x<1，不存在N滿足S(N+1)>x>SN
-
-2.如果x>710，數字過於龐大，程式無法計算 (備註2)
-
-3.如果33.8>x>27.5，計算時間將超出10分鐘，會讓使用者決定是否要執行
-
-### 特殊情況:
-
-1.如果x>=33.8，1/N會開始小於machine epsilon，程式會判斷為0，此時會用Euler’s estimate method計算估計值 (備註1)
-
-2.如果S(N+1)=x，不存在N滿足S(N+1)>x>SN，會輸出S(N+1)的答案並告知S(N+1)=x
-
-### 做法:
-
-1.判斷x範圍是否合理，如果x不屬於(1,710)，則讓使用者重新輸入
-
-2.用while迴圈計算級數和，當總和小於x時繼續做，可算出S(N+1)和SN；如果x>=33.8，用Euler’s estimate method計算估計值
-
-3.判斷x是否剛好等於級數和，如果是，輸出S(N+1)的答案並告知S(N+1)=x；否則正常輸出答案
-
 ## EXAMPLE
 
 #### EXAMPLE 1(正常情況):
@@ -71,15 +49,45 @@ OUTPUT:
     N=
         1.321592903575671e+17
 
+### 小提醒(以下三種情況均會讓使用者重新輸入x):
+
+1.如果x<1，不存在N滿足S(N+1)>x>SN
+
+2.如果x>710，數字過於龐大，程式無法計算 (備註2)
+
+3.如果33.8>x>27.5，計算時間將超出10分鐘，會讓使用者決定是否要執行
+
+### 特殊情況:
+
+1.如果x>=33.8，1/N會開始小於machine epsilon，程式會判斷為0，此時會用Euler-Maclaurin sum計算估計值 (備註1)
+
+2.如果S(N+1)=x，不存在N滿足S(N+1)>x>SN，會輸出S(N+1)的答案並告知S(N+1)=x
+
+### 做法:
+
+1.判斷x範圍是否合理，如果x不屬於(1,710)，則讓使用者重新輸入
+
+2.用while迴圈計算級數和，當總和小於x時繼續做，可算出S(N+1)和SN；如果x>=33.8，用Euler’s estimate method計算估計值
+
+3.判斷x是否剛好等於級數和，如果是，輸出S(N+1)的答案並告知S(N+1)=x；否則正常輸出答案
+
 ## 備註
 
 ### 備註1:
 
-用Euler’s estimate for the harmonic sum，我們可以得知 x ≈ SN ≈ ln(N) + γ  (參考2)
+用Euler-Maclaurin sum，我們可以得知 x ≈ ln(N) + γ + 1/2N − (k=1到∞，(B2k/N^k)x(1/N^2k)之總和) (參考2)
 
-where  γ =  0.577215664901533 . . . 
+where γ = 0.577215664901533 . . . 
+
+where B2k為白努利數 (參考3)
+
+由於此程式設定為x>33.8時使用Euler-Maclaurin sum，此時的1/N已小於machine epsilon，故忽略不計γ之後的項數
 
 也就是說，N ≈ exp(x - γ).
+
+### 備註2:
+
+
 
 ### 備註2:
 
@@ -94,3 +102,5 @@ N ≈ exp(x - γ).
 [參考1(Diego Miramontes)](https://www.researchgate.net/publication/344293598_An_alternative_strategy_for_harmonic_numbers_calculation_and_a_numerical_growth_rate)
 
 [參考2(Irish Math. Soc. Bulletin)](https://core.ac.uk/download/pdf/297018835.pdf)
+
+[參考3(Bernoulli numbers)](https://zh.wikipedia.org/wiki/%E4%BC%AF%E5%8A%AA%E5%88%A9%E6%95%B0)
